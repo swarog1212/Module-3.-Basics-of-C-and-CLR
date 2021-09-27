@@ -14,6 +14,9 @@ namespace ConsoleApp1
             Console.WriteLine($"Мне {age} лет");
             Console.WriteLine($"Есть ли у меня петомец? {pet}");
             Console.WriteLine($"Размер моей ноги {shoeSize}");
+            Console.WriteLine($"ByteMax {byte.MaxValue} \nByteMin {byte.MinValue}");
+            Console.WriteLine($"floatMax {float.MaxValue} \nfloatMin {float.MinValue}");
+            Console.WriteLine($"longMax {long.MaxValue} \nlongMin {long.MinValue}");
             Console.ReadKey();
         }
     }
