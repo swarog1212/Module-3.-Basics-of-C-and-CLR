@@ -7,13 +7,13 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string myName = "George";
-
-            Console.WriteLine(myName);
-            Console.WriteLine("\tПривет, мир");
-            Console.WriteLine("\tМне 27 лет");
-            Console.WriteLine("\tMy name is \nGeorge");
-            Console.WriteLine("\u0040");
-            Console.WriteLine("\x23");
+            byte age = 35;
+            bool pet = false;
+            float shoeSize = 44.5f;
+            Console.WriteLine($"Меня зовут {myName}");
+            Console.WriteLine($"Мне {age} лет");
+            Console.WriteLine($"Есть ли у меня петомец? {pet}");
+            Console.WriteLine($"Размер моей ноги {shoeSize}");
             Console.ReadKey();
         }
     }
