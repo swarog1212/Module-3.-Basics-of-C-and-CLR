@@ -16,15 +16,35 @@ namespace ConsoleApp2
         //}
         static void Main(string[] args)
         {
-
-            Console.Write("Введите ваше имя: ");
-            var name = Console.ReadLine();
-            Console.Write("Введите ваш возраст: ");
-            var age = checked ((byte)int.Parse(Console.ReadLine()));
-            Console.WriteLine("Ваше имя {0} и возраст {1} лет", name, age);
-            Console.Write("Введите дату вашего рождения: ");
-            var data = Console.ReadLine();
-            Console.WriteLine("Ваша дата рождения: {0}", data);
+            (string Name, string LastName, string Login, int LoginLenght, bool Pet, double age, string[] FavColor) User;
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Вветите свое имя:");
+                User.Name = Console.ReadLine();
+                Console.WriteLine("Введите свою фамилию:");
+                User.LastName = Console.ReadLine();
+                Console.WriteLine("Введите свой логин:");
+                User.Login = Console.ReadLine();
+                User.LoginLenght = User.Login.Length;
+                Console.WriteLine("Есть ли у вас животное? Да или Нет:");
+                string HavPet = Console.ReadLine();
+                if (HavPet == "Да")
+                {
+                    User.Pet = true;
+                    Console.WriteLine(User.Pet);
+                }
+                else
+                {
+                    User.Pet = false;
+                    Console.WriteLine(User.Pet);
+                }
+                User.FavColor = new string[3];
+                Console.WriteLine("Введите три любимых цвета пользователя:");
+                for (int j = 0; j < User.FavColor.Length; j++)
+                {
+                    User.FavColor[i] = Console.ReadLine();
+                }
+            }
         }   
     }
 }
