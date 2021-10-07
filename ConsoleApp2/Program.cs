@@ -16,7 +16,7 @@ namespace ConsoleApp2
         //}
         static void Main(string[] args)
         {
-            (string Name, string LastName, string Login, int LoginLenght, bool Pet, double age, string[] FavColor) User;
+            (string Name, string LastName, string Login, int LoginLenght, bool Pet, double Age, string[] FavColor) User;
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Вветите свое имя:");
@@ -38,6 +38,8 @@ namespace ConsoleApp2
                     User.Pet = false;
                     Console.WriteLine(User.Pet);
                 }
+                Console.WriteLine("Введите возраст пользователя");
+                User.Age = double.Parse(Console.ReadLine());
                 User.FavColor = new string[3];
                 Console.WriteLine("Введите три любимых цвета пользователя:");
                 for (int j = 0; j < User.FavColor.Length; j++)
